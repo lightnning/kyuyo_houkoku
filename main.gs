@@ -1,7 +1,7 @@
 function main() {
 
   // 名簿シート処理
-  const memberSh = new DataSheet('1ZM63dTarSQQMZvZ-NDtOd5xNc_ei9FrFfSQNZPrXEDU', '名簿');
+  const memberSh = new DataSheet('*************************', '名簿');
   const memberObj = memberSh.toObj();
   const deleteKeyMember = ['no.', 'etc1', 'etc2',]; // 不要な列項目
   const response = '2022';
@@ -14,7 +14,7 @@ function main() {
   // console.log(memberObj);
 
   // 給与支払明細シート処理
-  const kyuyoShiharaiSh = new DataSheet('1ZM63dTarSQQMZvZ-NDtOd5xNc_ei9FrFfSQNZPrXEDU', '給与支払明細');
+  const kyuyoShiharaiSh = new DataSheet('**********************:', '給与支払明細');
   const kyuyoShiharaiObj = kyuyoShiharaiSh.toObj();
   var filteredkyuyoShiharaiObj = kyuyoShiharaiObj.filter(data => data['yearMonth'].includes(response)); //responseデータに絞る
   // console.log(filteredkyuyoShiharaiObj);
@@ -39,7 +39,7 @@ function main() {
 
   // 給与支払報告書のデータを帳票に入力して、個人ごとにPDF化して指定のフォルダに保存するスクリプト
   // 帳票シートのインスタンス化
-  const kyuyoHoukokuForm = new FormSheet('1ZM63dTarSQQMZvZ-NDtOd5xNc_ei9FrFfSQNZPrXEDU', '給与支払報告書');
+  const kyuyoHoukokuForm = new FormSheet('***********************************', '給与支払報告書');
   const setData = [
     ['行番', '列番', 'key',],
     [5, 14, 'address',], 
